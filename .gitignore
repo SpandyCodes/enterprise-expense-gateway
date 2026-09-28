@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Certs / secrets — never commit
+certs/ca/*.key
+certs/ca/*.srl
+certs/server/*.key
+certs/client/*.key
+certs/**/*.pem
+!certs/**/.gitkeep
+
+# Coverage / test artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+
+# DB / misc
+*.db
+.DS_Store
+docs/screenshots/*.png
+
+# Generated local certs (regenerate with scripts/generate_certs.sh)
+certs/**/*.crt
+certs/**/*.csr
+certs/**/*.srl
